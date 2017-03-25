@@ -20,7 +20,8 @@ const proxy = '';
 
 var port = 9838;
 var server = net.createServer();
-server.listen(9838);
+server.listen(port);
+console.log("port",server.address().port);
 
   
 	app.post('/fallback',json_body_parser, function (req, res) //2nd parameter is used to prevent empty string error in api.ai
