@@ -30,7 +30,7 @@ server.listen(port);
 		var options = 
 		{ 
 			method: 'POST',
-			url: 'http://'+hostname+':9000/sendtohelpdesk',
+			url: 'https://helpdeskserver.herokuapp.com/sendtohelpdesk',
 			headers: 
 			{ 
 				'cache-control': 'no-cache',
