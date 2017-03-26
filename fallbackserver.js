@@ -18,7 +18,7 @@ var net = require('net'),
 //const proxy='http://proxy.tcs.com:8080';// or blank for without proxy
 const proxy = '';
 
-var port = 0;
+var port = 0;//port=9838,set 0 for taking fromm environment
 var server = net.createServer();
 server.listen(port);
 console.log("port",server.address().port);
