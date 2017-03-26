@@ -18,7 +18,7 @@ var net = require('net'),
 //const proxy='http://proxy.tcs.com:8080';// or blank for without proxy
 const proxy = '';
 
-var port = process.env.PORT;
+var port = 0;
 var server = net.createServer();
 server.listen(port);
 console.log("port",server.address().port);
@@ -37,7 +37,7 @@ console.log("port",server.address().port);
 				'cache-control': 'no-cache',
 				'content-type': 'application/json' 
 			},
-			body: { query: req.body.result.resolvedQuery,sessionId: req.body.sessionId ,portAddress:port},
+			body: { query: req.body.result.resolvedQuery,sessionId: req.body.sessionId ,portAddress:server.address().port},
 			json: true 
 		};
 		console.log(options);
